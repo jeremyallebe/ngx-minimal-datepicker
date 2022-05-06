@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="previous" (click)="previousMonth($event)">
+    <fa-icon [icon]="iconPrevious" class="previous-icon"></fa-icon>
+  </div>
+  <div class="month-name">{{ monthFormatted }}</div>
+  <div class="next" (click)="nextMonth($event)">
+    <fa-icon [icon]="iconNext" class="next-icon"></fa-icon>
+  </div>
+</div>
+
+<div *ngIf="month?.length" class="month">
+  <div *ngIf="daysOfWeek?.length" class="days-of-week">
+    <div *ngFor="let day of daysOfWeek" class="day">{{ day }}</div>
+  </div>
+  <div *ngFor="let week of month" class="week">
+    <div *ngFor="let day of week" class="day" [class.today]="day.date.isSame(today, 'day')"
+      [class.selected]="selectedDate && day.date.isSame(selectedDate, 'day')"
+      [class.current-month]="day.date.isSame(currentMonth, 'month')">
+      <span class="number" (click)="selectDay(day.date, $event)">{{ day?.formattedDate }}</span>
+    </div>
+  </div>
+</div>
