@@ -1,10 +1,10 @@
 <div class="header">
   <div class="previous" (click)="previousMonth($event)">
-    <fa-icon [icon]="iconPrevious" class="previous-icon"></fa-icon>
+    <ng-content select=".previous-icon"></ng-content>
   </div>
   <div class="month-name">{{ monthFormatted }}</div>
   <div class="next" (click)="nextMonth($event)">
-    <fa-icon [icon]="iconNext" class="next-icon"></fa-icon>
+    <ng-content select=".next-icon"></ng-content>
   </div>
 </div>
 

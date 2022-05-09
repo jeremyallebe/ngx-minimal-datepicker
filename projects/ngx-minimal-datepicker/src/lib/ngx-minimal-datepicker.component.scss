@@ -59,7 +59,9 @@
       cursor: pointer;
 
       .previous-icon,
-      .next-icon {
+      .next-icon,
+      &::ng-deep .previous-icon,
+      &::ng-deep .next-icon {
         font-size: var(--icons-size);
         line-height: var(--icons-size);
         color: var(--icons-color);

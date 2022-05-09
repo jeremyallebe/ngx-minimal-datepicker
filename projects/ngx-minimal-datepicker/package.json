@@ -1,13 +1,11 @@
 {
-  "name": "@tjc/ngx-minimal-datepicker",
-  "version": "0.0.1",
+  "name": "ngx-minimal-datepicker",
+  "version": "0.0.2",
   "type": "module",
+  "private": false,
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0",
-    "@fortawesome/angular-fontawesome": "^0.10.2",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "moment": "^2.29.3"
   },
   "dependencies": {

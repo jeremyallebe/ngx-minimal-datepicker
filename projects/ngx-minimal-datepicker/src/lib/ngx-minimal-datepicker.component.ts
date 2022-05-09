@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 import { Day } from './ngx-minimal-datepicker.interface';
 import { NgxMinimalDatepickerService } from './ngx-minimal-datepicker.service';
@@ -12,8 +11,6 @@ import { NgxMinimalDatepickerService } from './ngx-minimal-datepicker.service';
 export class NgxMinimalDatepickerComponent implements OnInit {
 
   @Input() locale: string = 'en';
-  @Input() iconPrevious: any = faChevronLeft;
-  @Input() iconNext: any = faChevronRight;
   @Input() selectedDate?: moment.Moment;
 
   @Output() dateChanged: EventEmitter<string> = new EventEmitter<string>();
